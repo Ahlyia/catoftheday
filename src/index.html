@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Cat Of The Day!</title>
+        <title>cat</title>
         <script>
             var catImageLabel;
             
-            var catData = {}
+            function cat(){
+                let minImages = 1;
+                let maxImages = 365;
+            
+                let randomInteger = Math.floor(Math.random() * (maxImages - minImages + 1)) + minImages;
 
-            window.onload(() => {
                 catImageLabel = document.getElementById("catImage")
 
-                let fetchedCatInfo = fetch()
-            });
+                catImageLabel.src = "../cats/"+randomInteger+".jpg";
+                meow();
+            }
 
-            var retValue = fetch("https://api.thecatapi.com/v1/images/search")
-            retValue.then(response => response.json())
-            .then(data => console.log(data[0]))
-            .catch(error => console.error("error: ",error));
+            document.addEventListener("DOMContentLoaded",()=>{
+                cat();
+                setInterval(cat,5000);
+            });
+            
+            function meow() {
+                let minSounds = 1;
+                let maxSounds = 6;
+                
+                let randomInt = Math.floor(Math.random() * (maxSounds-minSounds + 1)) + minSounds;
+
+                let sound = new Audio("../meows/"+randomInt+".mp3");
+                sound.play();
+                console.log("PLAYED SOUND");
+            }
 
         </script>
         <link rel="stylesheet" href="./style.css">

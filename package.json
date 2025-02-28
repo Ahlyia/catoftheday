@@ -1,8 +1,8 @@
 {
-  "name": "cat-of-the-day",
+  "name": "cats-gen",
   "version": "1.0.0",
-  "description": "Generates a cat for each day!!",
-  "license": "ISC",
+  "description": "Generates cats!",
+  "license": "MIT",
   "author": "Ahlyia Green",
   "type": "commonjs",
   "main": "index.js",

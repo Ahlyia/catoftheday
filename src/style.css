@@ -1,0 +1,12 @@
+* {
+    margin: 0px;
+}
+
+.catImage {
+    position: absolute;
+    padding-top:30%;
+    width:30%;
+    border: 1px solid black;
+    right: 3vw;
+    bottom: 3vw;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cat Of The Day!</title>
+        <script>
+            var catImageLabel;
+            
+            var catData = {}
+
+            window.onload(() => {
+                catImageLabel = document.getElementById("catImage")
+
+                let fetchedCatInfo = fetch()
+            });
+
+            var retValue = fetch("https://api.thecatapi.com/v1/images/search")
+            retValue.then(response => response.json())
+            .then(data => console.log(data[0]))
+            .catch(error => console.error("error: ",error));
+
+        </script>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <img class="catImage" id="catImage">
+    </body>
+</html>
